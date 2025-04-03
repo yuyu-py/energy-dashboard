@@ -1,0 +1,109 @@
+/* assets/style.css */
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    background-color: #F5F5F5;
+    overflow-x: hidden; /* 横スクロールバーを非表示に */
+}
+
+.header {
+    background-color: #1A237E;
+    height: 280px; /* 高さを少し増やす */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px; /* 下部に余白を追加 */
+}
+
+.header-emoji {
+    font-size: 52px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-title {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-description {
+    color: #E0E0E0;
+    margin: 6px auto;
+    text-align: center;
+    max-width: 480px;
+}
+
+/* メニュー部分のスタイル修正 */
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    margin: 30px auto; /* 上下のマージンを増やし、ヘッダーとの重なりを解消 */
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    position: relative;
+    flex-wrap: wrap; /* 小さい画面でも崩れないように */
+}
+
+.menu-title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #1A237E;
+}
+
+.dropdown {
+    min-width: 200px;
+    margin-bottom: 10px; /* 下部にマージンを追加 */
+}
+
+/* グラフを包むラッパーのスタイル修正 */
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%; /* 画面幅の95%を使用 */
+    max-width: 1600px; /* 最大幅を大きく */
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 28px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px; /* パディングを追加 */
+}
+
+/* レスポンシブデザイン用のメディアクエリ */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .menu > div {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .dropdown {
+        width: 100%;
+    }
+    
+    .header-title {
+        font-size: 32px; /* スマホでのフォントサイズを小さく */
+    }
+    
+    .header-description {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}
