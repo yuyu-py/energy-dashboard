@@ -106,4 +106,9 @@ body {
         font-size: 14px;
         padding: 0 15px;
     }
+
+    /* スマホ表示時のグラフ調整 */
+    .card {
+        padding: 5px;
+    }
 }

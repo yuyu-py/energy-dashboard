@@ -25,8 +25,7 @@ external_stylesheets = [
 
 # Dashアプリケーションのインスタンス化（外部スタイルシートを指定）
 app = Dash(__name__, external_stylesheets=external_stylesheets)
-# サーバー変数を追加
-server = app.server  
+
 # ブラウザのタブに表示されるタイトルを設定
 app.title = "日本の電力消費ダッシュボード | データで見る電力事情"
 
@@ -101,6 +100,7 @@ app.layout = html.Div(
                                 id="consumption-chart",
                                 config={"displayModeBar": False},
                                 style={"height": "450px"},  # グラフの高さを指定
+                                responsive=True,  # レスポンシブ対応を有効化
                             ),
                             className="card",
                         ),
@@ -111,6 +111,7 @@ app.layout = html.Div(
                                 id="renewable-chart",
                                 config={"displayModeBar": False},
                                 style={"height": "450px"},  # グラフの高さを指定
+                                responsive=True,  # レスポンシブ対応を有効化
                             ),
                             className="card",
                         ),
@@ -172,6 +173,7 @@ def update_charts(region, start_date, end_date):
             "margin": {"t": 50, "l": 50, "r": 25, "b": 50},  # マージン調整
             "hovermode": "closest",  # ホバー表示を最適化
             "plot_bgcolor": "white",  # グラフ背景色を白に
+            "autosize": True,  # 自動サイズ調整を有効化
         },
     }
     
@@ -208,6 +210,7 @@ def update_charts(region, start_date, end_date):
             "margin": {"t": 50, "l": 50, "r": 25, "b": 50},  # マージン調整
             "hovermode": "closest",  # ホバー表示を最適化
             "plot_bgcolor": "white",  # グラフ背景色を白に
+            "autosize": True,  # 自動サイズ調整を有効化
         },
     }
     
