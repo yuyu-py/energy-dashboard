@@ -25,7 +25,7 @@ external_stylesheets = [
 
 # Dashアプリケーションのインスタンス化（外部スタイルシートを指定）
 app = Dash(__name__, external_stylesheets=external_stylesheets)
-
+server = app.server  # サーバー変数を追加
 # ブラウザのタブに表示されるタイトルを設定
 app.title = "日本の電力消費ダッシュボード | データで見る電力事情"
 
